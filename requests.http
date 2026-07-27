@@ -1,0 +1,41 @@
+@baseUrl = http://localhost:3000/api
+@noteId = 1
+
+### Kontrola serveru
+GET {{baseUrl}}/health
+
+### CREATE – vytvoření poznámky
+POST {{baseUrl}}/notes
+Content-Type: application/json
+
+{
+  "text": "Procvičit Express Router",
+  "category": "node"
+}
+
+### READ – všechny poznámky
+GET {{baseUrl}}/notes
+
+### READ – jedna poznámka
+GET {{baseUrl}}/notes/{{noteId}}
+
+### UPDATE – úprava textu nebo kategorie
+PATCH {{baseUrl}}/notes/{{noteId}}
+Content-Type: application/json
+
+{
+  "text": "Procvičit Express Router a middleware",
+  "category": "express"
+}
+
+### SEARCH – vyhledávání v textu
+GET {{baseUrl}}/notes?search=Express
+
+### FILTER – filtrování podle kategorie
+GET {{baseUrl}}/notes?category=express
+
+### SEARCH + FILTER
+GET {{baseUrl}}/notes?search=router&category=express
+
+### DELETE – odstranění poznámky
+DELETE {{baseUrl}}/notes/{{noteId}}
