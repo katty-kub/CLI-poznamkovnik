@@ -105,11 +105,9 @@ node --version
 Repozitář si naklonuji z GitHubu a přesunu se do jeho složky:
 
 ```
-git clone
-cd cli-poznamkovnik
+git clone https://github.com/katty-kub/CLI-poznamkovnik.git
+cd CLI-poznamkovnik
 ```
-
-Text `ODKAZ_NA_REPOZITAR` nahradím skutečným odkazem na svůj GitHub repozitář.
 
 Pokud už mám projekt uložený v počítači, pouze si jeho složku otevřu ve VS Code
 a v terminálu zkontroluji, že jsem v kořenové složce projektu.
